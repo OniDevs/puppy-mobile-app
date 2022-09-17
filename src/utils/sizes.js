@@ -7,3 +7,6 @@ const fontSize = {
   medium: 16,
   small: 14,
 };
+
+
+export { fontSize };
