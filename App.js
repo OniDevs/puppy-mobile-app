@@ -6,7 +6,17 @@ import * as SplashScreen from 'expo-splash-screen';
 import { fontFamily } from './src/utils/fonts';
 import { NavigationContainer } from '@react-navigation/native';
 import { PuppyTheme, PuppyThemeDark } from './src/utils/themes';
-import { Heading1, Heading2 } from './src/components/atoms/fonts/fonts';
+import {
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  Subtitle,
+  Label,
+  Body1,
+  Body2,
+  Caption
+} from './src/components/atoms/fonts';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -34,8 +44,15 @@ export default function App() {
     <NavigationContainer theme={scheme === 'dark' ? PuppyThemeDark : PuppyTheme}>{
       <View style={styles.container} onLayout={onLayoutRootView}>
         <Text>Open up App.js to start working on your app!!!</Text>
-        <Heading1/>
-        <Heading2/>
+        <Heading1 />
+        <Heading2 />
+        <Heading3 />
+        <Heading4 />
+        <Subtitle />
+        <Label />
+        <Body1 />
+        <Body2 />
+        <Caption />
         <StatusBar style="auto" />
       </View>
     }</NavigationContainer>
