@@ -1,4 +1,14 @@
-const fontFamily = {
+const size = {
+  xxx_large: 40,
+  xx_large: 32,
+  xxxx_large: 30,
+  x_large: 24,
+  large: 20,
+  medium: 16,
+  small: 14,
+};
+
+const type = {
   montserratBold: {
     name: 'Montserrat-Bold',
     value: require('../assets/fonts/Montserrat-Bold.ttf'),
@@ -15,6 +25,7 @@ const fontFamily = {
     name: 'Montserrat-Regular',
     value: require('../assets/fonts/Montserrat-Regular.ttf')
   }
-}
+};
 
-export { fontFamily };
+
+export { size, type };

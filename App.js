@@ -3,9 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, useColorScheme } from 'react-native';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import { fontFamily } from './src/utils/fonts';
+import { type } from './src/theme/fonts';
 import { NavigationContainer } from '@react-navigation/native';
-import { PuppyTheme, PuppyThemeDark } from './src/utils/themes';
+import { PuppyTheme, PuppyThemeDark } from './src/theme/themes';
 import {
   Heading1,
   Heading2,
@@ -23,10 +23,10 @@ SplashScreen.preventAutoHideAsync();
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-    [fontFamily.montserratBold.name]: fontFamily.montserratBold.value,
-    [fontFamily.montserratSemiBold.name]: fontFamily.montserratSemiBold.value,
-    [fontFamily.montserratMedium.name]: fontFamily.montserratMedium.value,
-    [fontFamily.montserratRegular.name]: fontFamily.montserratRegular.value,
+    [type.montserratBold.name]: type.montserratBold.value,
+    [type.montserratSemiBold.name]: type.montserratSemiBold.value,
+    [type.montserratMedium.name]: type.montserratMedium.value,
+    [type.montserratRegular.name]: type.montserratRegular.value,
   });
   const scheme = useColorScheme();
 
