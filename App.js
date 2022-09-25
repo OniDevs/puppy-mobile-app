@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, useColorScheme } from 'react-native';
+import { StyleSheet, Text, View, useColorScheme, Pressable } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { PuppyTheme, PuppyThemeDark } from './src/theme/themes';
@@ -40,6 +40,17 @@ export default function App() {
         <Body1 />
         <Body2 />
         <Caption />
+        <Pressable
+          style={({ pressed }) => [{
+            alignItems: 'center',
+            justifyContent: 'center',
+            paddingLeft: 24,
+            paddingRight: 24,
+            height: 40,
+            backgroundColor: '#112620'
+          }]}>
+          <Label style={{ selectable: false, color: '#F4F5F6' }}>{'Press Me'}</Label>
+        </Pressable>
         <StatusBar style="auto" />
       </View>
     }</NavigationContainer>
