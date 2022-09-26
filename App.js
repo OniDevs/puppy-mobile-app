@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, useColorScheme, Pressable } from 'react-native';
-import { FontAwesome5 } from '@expo/vector-icons';
+import { StyleSheet, Text, View, useColorScheme } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { PuppyTheme, PuppyThemeDark } from './src/theme/themes';
@@ -16,6 +15,7 @@ import {
   Caption
 } from './src/components/atoms/fonts';
 import { useCustomFonts } from './src/hooks/useCustomFonts';
+import { PuppyButton } from './src/components/atoms/PuppyButton/';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -41,39 +41,16 @@ export default function App() {
         <Body1 />
         <Body2 />
         <Caption />
-        {/* //* icon button */}
-        <Pressable
-          style={({ pressed }) => [{
-            alignItems: 'center',
-            justifyContent: 'center',
-            paddingLeft: 24,
-            paddingRight: 24,
-            height: 40,
-            backgroundColor: pressed ? 'rgba(17, 39, 33, 0.80)' : '#112620',
-            borderRadius: 20
-          }]}>{({ pressed }) => 
-          <Label style={{ color: '#F4F5F6' }}>
-            <Label style={{ textDecorationLine: pressed ? 'underline' : '' }}>{'Press Me'}</Label>
-            {' '}
-            {' '}
-            <FontAwesome5 name="arrow-right" size={20} color="white" />
-          </Label>}
-        </Pressable>
-        {/* //* button */}
-        <Pressable
-          style={({ pressed }) => [{
-            alignItems: 'center',
-            justifyContent: 'center',
-            paddingLeft: 24,
-            paddingRight: 24,
-            height: 40,
-            backgroundColor: pressed ? '#DE6902' : '#FD9D49',
-            borderRadius: 20
-          }]}>{({ pressed }) => 
-          <Label style={{ color: '#F4F5F6' }}>
-            <Label style={{ textDecorationLine: pressed ? 'underline' : '' }}>{'Press Me'}</Label>
-          </Label>}
-        </Pressable>
+        <PuppyButton rightIcon={'arrow-right'}>
+          {'Click Me'}
+        </PuppyButton>
+        <PuppyButton themeStyle='secondary' leftIcon={'arrow-left'}>
+          {'Click Me'}
+        </PuppyButton>
+        {/* //TODO: iconButton needs to be changed, is needed the bordered button */}
+        <PuppyButton rightIcon={'chevron-right'} isIconButton={true}>
+          {'Click Me'}
+        </PuppyButton>
         <StatusBar style="auto" />
       </View>
     }</NavigationContainer>

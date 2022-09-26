@@ -1,5 +1,5 @@
 import { DefaultTheme, DarkTheme } from '@react-navigation/native';
-import { textStyles } from '../styles';
+import { buttonStyles, textStyles } from '../styles';
 import colors from './colors';
 
 const PuppyTheme = {
@@ -10,7 +10,10 @@ const PuppyTheme = {
   themeStyles: {
     textStyles: {
       ...textStyles
-    }
+    },
+    buttonStyles: {
+      ...buttonStyles
+    },
   }
 };
 
@@ -23,7 +26,10 @@ const PuppyThemeDark = {
   themeStyles: {
     textStyles: {
       ...textStyles
-    }
+    },
+    buttonStyles: {
+      ...buttonStyles
+    },
   }
 };
 
