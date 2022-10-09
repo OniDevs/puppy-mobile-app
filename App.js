@@ -47,8 +47,13 @@ export default function App() {
         <PuppyButton themeStyle='secondary' leftIcon={'arrow-left'}>
           {'Click Me'}
         </PuppyButton>
-        {/* //TODO: iconButton needs to be changed, is needed the bordered button */}
-        <PuppyButton rightIcon={'chevron-right'} isIconButton={true}>
+        <PuppyButton themeStyle='iconPrimary' rightIcon={'chevron-right'} isIconButton={true}>
+          {'Click Me'}
+        </PuppyButton>
+        <PuppyButton themeStyle='whiteBase'>
+          {'Click Me'}
+        </PuppyButton>
+        <PuppyButton themeStyle='primaryRectangle'>
           {'Click Me'}
         </PuppyButton>
         <StatusBar style="auto" />

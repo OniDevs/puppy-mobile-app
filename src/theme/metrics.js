@@ -5,6 +5,10 @@ const metrics = {
   buttonHeight: 40,
   buttonBorderRadius: 20,
   buttonIconSize: 20,
+  iconButtonPaddingLeft: 16,
+  iconButtonPaddingRight: 16,
+  borderWidth: 2,
+  buttonBorderRectangularRadius: 16,
 }
 
 export { metrics };

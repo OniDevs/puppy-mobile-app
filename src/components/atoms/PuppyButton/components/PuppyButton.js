@@ -19,21 +19,21 @@ const PuppyButton = ({
         ...themeStyles.buttonStyles[themeStyle].style({ pressed }),
         ...style
       }]}>{({ pressed }) =>
-        <Label style={{ color: themeStyles.buttonStyles[themeStyle].textColor }}>
+        <Label style={{ color: themeStyles.buttonStyles[themeStyle].base({ pressed }).textColor }}>
           <Choose>
             <When condition={isIconButton}>
               <FontAwesome5
                 name={leftIcon || rightIcon}
-                size={themeStyles.buttonStyles[themeStyle].iconSize}
-                color={themeStyles.buttonStyles[themeStyle].textColor} />
+                size={themeStyles.buttonStyles[themeStyle].base({ pressed }).iconSize}
+                color={themeStyles.buttonStyles[themeStyle].base({ pressed }).textColor} />
             </When>
             {/* //* if not icon button is a button with text */}
             <Otherwise>
               <If condition={leftIcon}>
                 <FontAwesome5
                   name={leftIcon}
-                  size={themeStyles.buttonStyles[themeStyle].iconSize}
-                  color={themeStyles.buttonStyles[themeStyle].textColor} />
+                  size={themeStyles.buttonStyles[themeStyle].base({ pressed }).iconSize}
+                  color={themeStyles.buttonStyles[themeStyle].base({ pressed }).textColor} />
                 {' '}
                 {' '}
               </If>
@@ -43,8 +43,8 @@ const PuppyButton = ({
                 {' '}
                 <FontAwesome5
                   name={rightIcon}
-                  size={themeStyles.buttonStyles[themeStyle].iconSize}
-                  color={themeStyles.buttonStyles[themeStyle].textColor} />
+                  size={themeStyles.buttonStyles[themeStyle].base({ pressed }).iconSize}
+                  color={themeStyles.buttonStyles[themeStyle].base({ pressed }).textColor} />
               </If>
             </Otherwise>
           </Choose>
